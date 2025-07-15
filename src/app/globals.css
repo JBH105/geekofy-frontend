@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@theme {
+  --font-helvetica: "Helvetica", sans-serif;
+  --font-Baloo_2: "Baloo 2", sans-serif;
+  --font-helvetica-light: "Helvetica Light", sans-serif;
+  --font-helvetica-compressed: "Helvetica Compressed", sans-serif;
+  --font-helvetica-rounded: "Helvetica Rounded Bold", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-helvetica); /* Use Helvetica here */
+  --font-serif: var(--font-Baloo_2); /* Use Baloo 2 */
+  --font-mono: ui-monospace, SFMono-Regular;
+}
+
+* {
+  /* font-family: var(--font-sans); */
+  font-family: Helvetica;
+}
+
+.seconday_header {
+  font-family: var(--font-Baloo_2);
+}
+
+.layout_container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar by default */
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+/* Show scrollbar on hover */
+.custom-scrollbar-light::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.custom-scrollbar-light::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* landing page styles */
+@media (max-width: 767px) {
+  .md\:hidden.header-mobile {
+    display: flex;
+  }
+
+  .flex.items-center.justify-end.gap-\[32px\].py-\[16px\].mr-10 {
+    display: none;
+  }
+
+  .flex-col.items-center.justify-center.h-\[55vh\] {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .hidden.md\:flex.flex-col.items-end.justify-end.relative {
+    display: none;
+  }
+
+  .md\:hidden.flex.flex-col.w-full.px-4.gap-2 {
+    display: flex;
+  }
+
+  .w-\[600px\].h-\[48px\] {
+    width: 100%;
+  }
+
+  .w-full.h-\[48px\].flex.items-center.gap-4.px-5.py-\[10px\].rounded-\[8px\].border.border-\[\#B3B3B3\].bg-white.shadow-md {
+    margin-bottom: 10px;
+  }
+
+  .text-\[\#808080\].text-sm.leading-6.mt-2.font-normal.font-helvetica {
+    text-align: center;
+  }
+
+  .hidden.md\:inline-flex.items-center.justify-center.gap-\[60px\].flex-wrap.mt-\[64px\] {
+    display: none;
+  }
+
+  .header-mobile {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+
+  .header-mobile .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0084ff;
+  }
+
+  .header-mobile .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-mobile .user-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.height_revert {
+  height: inherit !important;
+}
+
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 300px !important;
+  flex-shrink: 0;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 5px;
+  position: static !important;
+  width: 32px !important; 
+  height: 32px !important;
+  aspect-ratio: 1/1; 
+  border-radius: 50% !important; 
+  border: 1px solid #999999 !important; 
+  background-color: #ffffff !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; 
+  transition: all 0.2s ease-in-out; 
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none !important; 
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
