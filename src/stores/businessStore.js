@@ -33,6 +33,7 @@ export const useBusinessStore = create((set, get) => ({
     map: null,
     details: null,
   },
+  
 
   // Centralized function to fetch /api/business/details
   fetchDetailsData: async (businessSlug) => {
